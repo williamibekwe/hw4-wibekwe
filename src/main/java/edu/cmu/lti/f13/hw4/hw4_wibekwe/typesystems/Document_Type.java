@@ -13,14 +13,24 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Mon Oct 28 00:27:23 EDT 2013
- * @generated */
+// TODO: Auto-generated Javadoc
+/**
+ * Updated by JCasGen Mon Oct 28 00:27:23 EDT 2013.
+ *
+ * @generated
+ */
 public class Document_Type extends Annotation_Type {
-  /** @generated */
+  
+  /**
+   * Gets the fS generator.
+   *
+   * @return the fS generator
+   * @generated
+   */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  
+  /** The fs generator. @generated */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -36,25 +46,41 @@ public class Document_Type extends Annotation_Type {
         } else return new Document(addr, Document_Type.this);
   	  }
     };
-  /** @generated */
+  
+  /** The Constant typeIndexID. @generated */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Document.typeIndexID;
-  /** @generated 
-     @modifiable */
+  
+  /** The Constant featOkTst. @generated @modifiable */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
  
-  /** @generated */
+  /** The cas feat_relevance value. @generated */
   final Feature casFeat_relevanceValue;
-  /** @generated */
+  
+  /** The cas feat code_relevance value. @generated */
   final int     casFeatCode_relevanceValue;
-  /** @generated */ 
+  
+  /**
+   * Gets the relevance value.
+   *
+   * @param addr the addr
+   * @return the relevance value
+   * @generated
+   */ 
   public int getRelevanceValue(int addr) {
         if (featOkTst && casFeat_relevanceValue == null)
       jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
     return ll_cas.ll_getIntValue(addr, casFeatCode_relevanceValue);
   }
-  /** @generated */    
+  
+  /**
+   * Sets the relevance value.
+   *
+   * @param addr the addr
+   * @param v the v
+   * @generated
+   */    
   public void setRelevanceValue(int addr, int v) {
         if (featOkTst && casFeat_relevanceValue == null)
       jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
@@ -62,17 +88,32 @@ public class Document_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /** The cas feat_query id. @generated */
   final Feature casFeat_queryID;
-  /** @generated */
+  
+  /** The cas feat code_query id. @generated */
   final int     casFeatCode_queryID;
-  /** @generated */ 
+  
+  /**
+   * Gets the query id.
+   *
+   * @param addr the addr
+   * @return the query id
+   * @generated
+   */ 
   public int getQueryID(int addr) {
         if (featOkTst && casFeat_queryID == null)
       jcas.throwFeatMissing("queryID", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
     return ll_cas.ll_getIntValue(addr, casFeatCode_queryID);
   }
-  /** @generated */    
+  
+  /**
+   * Sets the query id.
+   *
+   * @param addr the addr
+   * @param v the v
+   * @generated
+   */    
   public void setQueryID(int addr, int v) {
         if (featOkTst && casFeat_queryID == null)
       jcas.throwFeatMissing("queryID", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
@@ -80,17 +121,32 @@ public class Document_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /** The cas feat_text. @generated */
   final Feature casFeat_text;
-  /** @generated */
+  
+  /** The cas feat code_text. @generated */
   final int     casFeatCode_text;
-  /** @generated */ 
+  
+  /**
+   * Gets the text.
+   *
+   * @param addr the addr
+   * @return the text
+   * @generated
+   */ 
   public String getText(int addr) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated */    
+  
+  /**
+   * Sets the text.
+   *
+   * @param addr the addr
+   * @param v the v
+   * @generated
+   */    
   public void setText(int addr, String v) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
@@ -98,23 +154,45 @@ public class Document_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /** The cas feat_ token list. @generated */
   final Feature casFeat_TokenList;
-  /** @generated */
+  
+  /** The cas feat code_ token list. @generated */
   final int     casFeatCode_TokenList;
-  /** @generated */ 
+  
+  /**
+   * Gets the token list.
+   *
+   * @param addr the addr
+   * @return the token list
+   * @generated
+   */ 
   public int getTokenList(int addr) {
         if (featOkTst && casFeat_TokenList == null)
       jcas.throwFeatMissing("TokenList", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
     return ll_cas.ll_getRefValue(addr, casFeatCode_TokenList);
   }
-  /** @generated */    
+  
+  /**
+   * Sets the token list.
+   *
+   * @param addr the addr
+   * @param v the v
+   * @generated
+   */    
   public void setTokenList(int addr, int v) {
         if (featOkTst && casFeat_TokenList == null)
       jcas.throwFeatMissing("TokenList", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
     ll_cas.ll_setRefValue(addr, casFeatCode_TokenList, v);}
     
-   /** @generated */
+   /**
+    * Gets the token list.
+    *
+    * @param addr the addr
+    * @param i the i
+    * @return the token list
+    * @generated
+    */
   public int getTokenList(int addr, int i) {
         if (featOkTst && casFeat_TokenList == null)
       jcas.throwFeatMissing("TokenList", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
@@ -124,7 +202,14 @@ public class Document_Type extends Annotation_Type {
   return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_TokenList), i);
   }
    
-  /** @generated */ 
+  /**
+   * Sets the token list.
+   *
+   * @param addr the addr
+   * @param i the i
+   * @param v the v
+   * @generated
+   */ 
   public void setTokenList(int addr, int i, int v) {
         if (featOkTst && casFeat_TokenList == null)
       jcas.throwFeatMissing("TokenList", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document");
@@ -137,8 +222,13 @@ public class Document_Type extends Annotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features.
+   *
+   * @param jcas the jcas
+   * @param casType the cas type
+   * @generated
+   */
   public Document_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

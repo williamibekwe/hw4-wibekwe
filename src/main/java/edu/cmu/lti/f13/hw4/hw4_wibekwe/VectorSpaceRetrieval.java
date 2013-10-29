@@ -35,8 +35,18 @@ import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.util.XMLInputSource;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class VectorSpaceRetrieval.
+ */
 public class VectorSpaceRetrieval {
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws Exception the exception
+	 */
 	public static void main(String [] args) 
 			throws Exception {
 			

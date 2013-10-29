@@ -2,36 +2,73 @@ package edu.cmu.lti.f13.hw4.hw4_wibekwe.utils;
 
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
 /**
+ * The Class Triplet.
+ *
+ * @param <L> the generic type
+ * @param <M> the generic type
+ * @param <R> the generic type
  * @author willibeamin
- * This class  in that will allow three different generic variables. 
+ * This class  in that will allow three different generic variables.
  * Think of this as an extension of Pairs
- * @param <L>
- * @param <M>
- * @param <R>
- * 
  */
 public class Triplet<L,M,R> {
 
-	  private final L left;
-	  private final R right;
-	  private final M middle;
+	  /** The left. */
+  	private final L left;
+	  
+  	/** The right. */
+  	private final R right;
+	  
+  	/** The middle. */
+  	private final M middle;
 	  
 
-	  public Triplet(L left, M middle, R right) {
+	  /**
+  	 * Instantiates a new triplet.
+  	 *
+  	 * @param left the left
+  	 * @param middle the middle
+  	 * @param right the right
+  	 */
+  	public Triplet(L left, M middle, R right) {
 	    this.left = left;
 	    this.right = right;
 	    this.middle = middle; 
 	  }
 
-	  public L getLeft() { return left; }
-	  public R getRight() { return right; }
-	  public M getMiddle() { return middle; }
+	  /**
+  	 * Gets the left.
+  	 *
+  	 * @return the left
+  	 */
+  	public L getLeft() { return left; }
+	  
+  	/**
+  	 * Gets the right.
+  	 *
+  	 * @return the right
+  	 */
+  	public R getRight() { return right; }
+	  
+  	/**
+  	 * Gets the middle.
+  	 *
+  	 * @return the middle
+  	 */
+  	public M getMiddle() { return middle; }
 
-	  @Override
+	  /* (non-Javadoc)
+  	 * @see java.lang.Object#hashCode()
+  	 */
+  	@Override
 	  public int hashCode() { return left.hashCode() ^ right.hashCode() ^ middle.hashCode(); }
 
-	  @Override
+	  /* (non-Javadoc)
+  	 * @see java.lang.Object#equals(java.lang.Object)
+  	 */
+  	@Override
 	  public boolean equals(Object o) {
 	    if (o == null) return false;
 	    if (!(o instanceof Triplet)) return false;

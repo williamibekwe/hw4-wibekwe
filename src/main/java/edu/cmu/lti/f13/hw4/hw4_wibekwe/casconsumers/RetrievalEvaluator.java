@@ -22,26 +22,35 @@ import edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document;
 import edu.cmu.lti.f13.hw4.hw4_wibekwe.utils.Answers;
 import edu.cmu.lti.f13.hw4.hw4_wibekwe.utils.Triplet;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RetrievalEvaluator.
+ */
 public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
-	/** query id number **/
+	/** query id number *. */
 	public ArrayList<Integer> qIdList;
 
-	/** query and text relevant values **/
+	/** query and text relevant values *. */
 	public ArrayList<Integer> relList;
 	
-	/** list of all the documents **/
+	/** list of all the documents *. */
 	public ArrayList<HashMap<String, Integer>> documents;
 
-	/** list of all the the different types of words **/
+	/** list of all the the different types of words *. */
 	public ArrayList<String> globalDict;
 	
-	/** list of all the the different questions **/
+	/** list of all the the different questions *. */
 	ArrayList<String> questionString; 
 	
-	/** list of all answer sentences **/
+	/** list of all answer sentences *. */
 	ArrayList<String> answerString; 
 	
+	/**
+	 * Bubble sort on left.
+	 *
+	 * @param num the num
+	 */
 	private static void BubbleSortOnLeft(
 			ArrayList<Triplet<Double, Integer, Integer>> num) {
 		for (int i = 0; i < num.size() - 1; i++)
@@ -54,6 +63,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see org.apache.uima.collection.CasConsumer_ImplBase#initialize()
+	 */
 	public void initialize() throws ResourceInitializationException {
 		qIdList = new ArrayList<Integer>();
 		relList = new ArrayList<Integer>();
@@ -65,6 +77,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	/**
 	 * 1. construct the global word dictionary 2. keep the word
 	 * frequency for each sentence
+	 *
+	 * @param aCas the a cas
+	 * @throws ResourceProcessException the resource process exception
 	 */
 	@Override
 	public void processCas(CAS aCas) throws ResourceProcessException {
@@ -103,8 +118,12 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	}
 
 	/**
-	 * 1. Compute Cosine Similarity, Jaccard Coefficient, Hamming Distance, Dice Coefficient and rank the retrieved sentences 
+	 * 1. Compute Cosine Similarity, Jaccard Coefficient, Hamming Distance, Dice Coefficient and rank the retrieved sentences
 	 * 2. Compute the MRR metric
+	 *
+	 * @param arg0 the arg0
+	 * @throws ResourceProcessException the resource process exception
+	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	@Override
 	public void collectionProcessComplete(ProcessTrace arg0)
@@ -278,7 +297,10 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	
 	/**
-	 * Cosine Similarity calculation between two sest of tokens
+	 * Cosine Similarity calculation between two sest of tokens.
+	 *
+	 * @param queryVector the query vector
+	 * @param docVector the doc vector
 	 * @return cosine_similarity
 	 */
 	private double computeCosineSimilarity(Map<String, Integer> queryVector,Map<String, Integer> docVector) {
@@ -299,7 +321,10 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	
 	
 	/**
-	 * Hamming Distance calculation between two sets of tokens
+	 * Hamming Distance calculation between two sets of tokens.
+	 *
+	 * @param sequence1 the sequence1
+	 * @param sequence2 the sequence2
 	 * @return HammingDistance
 	 */
 	public static int computeHammingDistance(String sequence1, String sequence2) {
@@ -314,12 +339,13 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	    }
 	    return result +  longest - shorter;
 	}
+	
 	/**
-	 * 
 	 * helper function for hamming distance algorithm
-	 * This take the to string sets, get the bi-grams, and puts them in into a Set class
-	 * 
-	 * @return 
+	 * This take the to string sets, get the bi-grams, and puts them in into a Set class.
+	 *
+	 * @param s the s
+	 * @return the sets the
 	 */
 	private Set<String> splitIntoBigrams(String s) {
         ArrayList<String> bigrams = new ArrayList<String>();
@@ -339,7 +365,10 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	
 	
 	/**
-	 * Dice Coefficient calculation between two sets of tokens
+	 * Dice Coefficient calculation between two sets of tokens.
+	 *
+	 * @param queryVector the query vector
+	 * @param docVector the doc vector
 	 * @return dice coefficient
 	 */
 	private double computeDiceCoefficient(String queryVector, String docVector) {
@@ -358,7 +387,10 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	
 	
 	/**
-	 * Jaccard coefficient calculation between two sets of tokens
+	 * Jaccard coefficient calculation between two sets of tokens.
+	 *
+	 * @param queryVector the query vector
+	 * @param docVector the doc vector
 	 * @return Jaccard Coefficient
 	 */
 	private double computeJaccardCoefficient(Map<String, Integer> queryVector,Map<String, Integer> docVector) {
@@ -384,7 +416,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 	
 	/**
-	 * Mean Reciprical Ranking
+	 * Mean Reciprical Ranking.
+	 *
+	 * @param mrr the mrr
 	 * @return mrr
 	 */
 	private double compute_mrr(ArrayList<Double> mrr) {

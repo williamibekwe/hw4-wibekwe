@@ -5,7 +5,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StopWords.
+ */
 public class StopWords {
+	
+	/**
+	 * Removes the stop words.
+	 *
+	 * @param document the document
+	 * @return the string
+	 * @throws FileNotFoundException the file not found exception
+	 */
 	public static String  removeStopWords( String document ) throws FileNotFoundException{
       //  System.out.println(System.getProperty("user.dir"));
 		//System.out.println(document);

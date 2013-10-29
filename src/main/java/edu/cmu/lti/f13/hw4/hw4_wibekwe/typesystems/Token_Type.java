@@ -13,14 +13,24 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** 
- * Updated by JCasGen Mon Oct 28 00:27:23 EDT 2013
- * @generated */
+// TODO: Auto-generated Javadoc
+/**
+ * Updated by JCasGen Mon Oct 28 00:27:23 EDT 2013.
+ *
+ * @generated
+ */
 public class Token_Type extends Annotation_Type {
-  /** @generated */
+  
+  /**
+   * Gets the fS generator.
+   *
+   * @return the fS generator
+   * @generated
+   */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
-  /** @generated */
+  
+  /** The fs generator. @generated */
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
@@ -36,25 +46,41 @@ public class Token_Type extends Annotation_Type {
         } else return new Token(addr, Token_Type.this);
   	  }
     };
-  /** @generated */
+  
+  /** The Constant typeIndexID. @generated */
   @SuppressWarnings ("hiding")
   public final static int typeIndexID = Token.typeIndexID;
-  /** @generated 
-     @modifiable */
+  
+  /** The Constant featOkTst. @generated @modifiable */
   @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Token");
  
-  /** @generated */
+  /** The cas feat_text. @generated */
   final Feature casFeat_text;
-  /** @generated */
+  
+  /** The cas feat code_text. @generated */
   final int     casFeatCode_text;
-  /** @generated */ 
+  
+  /**
+   * Gets the text.
+   *
+   * @param addr the addr
+   * @return the text
+   * @generated
+   */ 
   public String getText(int addr) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Token");
     return ll_cas.ll_getStringValue(addr, casFeatCode_text);
   }
-  /** @generated */    
+  
+  /**
+   * Sets the text.
+   *
+   * @param addr the addr
+   * @param v the v
+   * @generated
+   */    
   public void setText(int addr, String v) {
         if (featOkTst && casFeat_text == null)
       jcas.throwFeatMissing("text", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Token");
@@ -62,17 +88,32 @@ public class Token_Type extends Annotation_Type {
     
   
  
-  /** @generated */
+  /** The cas feat_frequency. @generated */
   final Feature casFeat_frequency;
-  /** @generated */
+  
+  /** The cas feat code_frequency. @generated */
   final int     casFeatCode_frequency;
-  /** @generated */ 
+  
+  /**
+   * Gets the frequency.
+   *
+   * @param addr the addr
+   * @return the frequency
+   * @generated
+   */ 
   public int getFrequency(int addr) {
         if (featOkTst && casFeat_frequency == null)
       jcas.throwFeatMissing("frequency", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Token");
     return ll_cas.ll_getIntValue(addr, casFeatCode_frequency);
   }
-  /** @generated */    
+  
+  /**
+   * Sets the frequency.
+   *
+   * @param addr the addr
+   * @param v the v
+   * @generated
+   */    
   public void setFrequency(int addr, int v) {
         if (featOkTst && casFeat_frequency == null)
       jcas.throwFeatMissing("frequency", "edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Token");
@@ -82,8 +123,13 @@ public class Token_Type extends Annotation_Type {
 
 
 
-  /** initialize variables to correspond with Cas Type and Features
-	* @generated */
+  /**
+   * initialize variables to correspond with Cas Type and Features.
+   *
+   * @param jcas the jcas
+   * @param casType the cas type
+   * @generated
+   */
   public Token_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());

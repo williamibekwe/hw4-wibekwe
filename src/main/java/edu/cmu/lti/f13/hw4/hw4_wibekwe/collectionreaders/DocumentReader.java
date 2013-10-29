@@ -9,9 +9,16 @@ import org.apache.uima.jcas.JCas;
 import edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DocumentReader.
+ */
 public class DocumentReader 
 extends JCasAnnotator_ImplBase  {
 	
+	/* (non-Javadoc)
+	 * @see org.apache.uima.analysis_component.JCasAnnotator_ImplBase#process(org.apache.uima.jcas.JCas)
+	 */
 	@Override
 	public void process(JCas jcas) 
 			throws AnalysisEngineProcessException {
@@ -44,6 +51,12 @@ extends JCasAnnotator_ImplBase  {
 	}
 
 
+	/**
+	 * Parses the data line.
+	 *
+	 * @param line the line
+	 * @return the array list
+	 */
 	public static ArrayList<String> parseDataLine(String line) {
 		ArrayList<String> docInfo;
 

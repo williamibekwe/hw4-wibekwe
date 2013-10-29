@@ -15,6 +15,10 @@ import edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Document;
 import edu.cmu.lti.f13.hw4.hw4_wibekwe.typesystems.Token;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DocumentVectorAnnotator.
+ */
 public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 
         @Override
@@ -33,11 +37,13 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
                 }
 
         }
+        
         /**
-         * 
-         * @param jcas
-         * @param doc
-         * @throws FileNotFoundException 
+         * Creates the term freq vector.
+         *
+         * @param jcas the jcas
+         * @param doc the doc
+         * @throws FileNotFoundException the file not found exception
          */
         
 
